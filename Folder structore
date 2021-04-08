@@ -1,0 +1,11 @@
+Html:
+Model:Connection through data we use model
+Controller:controll model and view
+Routing:use for api,web,channle
+File store
+config:
+Dependency file
+Middleware:For checks 
+kernal:when we register Middleware then we use kernal
+Providers: for authrization of user etc
+Vendor:all Dependency file here
