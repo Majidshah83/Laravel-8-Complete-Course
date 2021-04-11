@@ -26,7 +26,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string|null
      */
-      protected $namespace = 'App\\Http\\Controllers';
+      protected $namespace = 'App\\Http\\Controllers'; //if we work on laravel 8 and call controller from old method then this line to uncomment
 
     /**
      * Define your route model bindings, pattern filters, etc.
