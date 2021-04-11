@@ -12,4 +12,5 @@ class Usercontroller extends Controller
     public function showid($id){
         return $id;
     }
+    
 }

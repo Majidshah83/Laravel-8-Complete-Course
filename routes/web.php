@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('newfile');
+    return view('newfile');      // by default we can call view
 });
 // Route::get("controller",[Usercontroller::class,'index']); Laravel 8 calll function
 Route::get('/controller', 'UserController@index');
-Route::get('/show/{id}',[Usercontroller::class,'showid']);
+Route::get('/show/{id}',[Usercontroller::class,'showid']);  //user controller
+// Route::view("user","User"); // we can call view  like this 
+Route::get('/user', function () {
+    return view('user');      // by default we can call  user view
+});
