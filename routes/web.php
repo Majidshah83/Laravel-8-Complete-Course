@@ -20,6 +20,9 @@ Route::get('/', function () {
 Route::get('/controller', 'UserController@index');
 Route::get('/show/{id}',[Usercontroller::class,'showid']);  //user controller
 // Route::view("user","User"); // we can call view  like this 
-Route::get('/user', function () {
-    return view('user');      // by default we can call  user view
+Route::get('/user/{name}', function ($name) {
+    return view('user',["user"=>$name]);      // pass data through url in view
 });
+// Route::get('/user', function () {
+//     return view('user');      // by default we can call  userview
+// });
