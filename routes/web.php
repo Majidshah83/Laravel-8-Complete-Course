@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+ use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('newfile');
 });
+// Route::get("controller",[Usercontroller::class,'index']); Laravel 8 calll function
+Route::get('/controller', 'UserController@index');
+Route::get('/show/{id}',[Usercontroller::class,'showid']);
