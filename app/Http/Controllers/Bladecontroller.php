@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class Bladecontroller extends Controller
 {
     public function bladeview(){
-        return view('userblade',["users"=>'majidshah']);
+        $data=['majidshah','adnan','ali','hamad'];
+        return view('userblade',["users"=>$data]);
     }
 }
