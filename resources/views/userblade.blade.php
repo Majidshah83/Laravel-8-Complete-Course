@@ -1,2 +1,1 @@
-<h1>helo blade</h1>
-<h2>{{$users}}</h2>
+<h1>helo {{count($users)}}</h1> <!-- array --> 
