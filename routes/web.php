@@ -29,3 +29,5 @@ Route::get('/user/{name}', function ($name) {
 // });
 // Route::get('user/{name}','Viewcontroller@view'); //call view through cotroller
 Route::get('user/{name}',[Viewcontroller::class,'view']);
+Route::view("header","Header"); //header  view call
+Route::view("about","About"); //about  view call
