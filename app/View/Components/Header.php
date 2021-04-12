@@ -11,9 +11,10 @@ class Header extends Component
      *
      * @return void
      */
-    public function __construct()
+    public $title;  // by deafult blank title
+    public function __construct($componentName) //components name pass here
     {
-        //
+        $this->title=$componentName;   //pass compnents in title
     }
 
     /**
