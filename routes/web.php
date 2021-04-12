@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
  use App\Http\Controllers\UserController;
   use App\Http\Controllers\Viewcontroller;
+  use App\Http\Controllers\Bladecontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,3 +32,4 @@ Route::get('/user/{name}', function ($name) {
 Route::get('user/{name}',[Viewcontroller::class,'view']);
 Route::view("header","Header"); //header  view call
 Route::view("about","About"); //about  view call
+Route::get("blade",[Bladecontroller::class,'bladeview']);
