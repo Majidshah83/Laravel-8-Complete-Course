@@ -1,1 +1,2 @@
-<h1>Hello{{$user}}</h1>
+<!-- <h1>Hello majid</h1> satically -->
+<h1>Hello{{$users}}</h1>

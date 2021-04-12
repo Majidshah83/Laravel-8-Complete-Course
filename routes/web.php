@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
  use App\Http\Controllers\UserController;
+  use App\Http\Controllers\Viewcontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,8 +22,10 @@ Route::get('/controller', 'UserController@index');
 Route::get('/show/{id}',[Usercontroller::class,'showid']);  //user controller
 // Route::view("user","User"); // we can call view  like this 
 Route::get('/user/{name}', function ($name) {
-    return view('user',["user"=>$name]);      // pass data through url in view
+    return view('user',["users"=>$name]);      // pass data through url in view
 });
 // Route::get('/user', function () {
 //     return view('user');      // by default we can call  userview
 // });
+// Route::get('user/{name}','Viewcontroller@view'); //call view through cotroller
+Route::get('user/{name}',[Viewcontroller::class,'view']);
