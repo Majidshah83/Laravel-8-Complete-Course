@@ -33,3 +33,4 @@ Route::get('user/{name}',[Viewcontroller::class,'view']);
 Route::view("header","Header"); //header  view call
 Route::view("about","About"); //about  view call
 Route::get("blade",[Bladecontroller::class,'bladeview']);
+Route::view("inner","inner");
