@@ -34,3 +34,4 @@ Route::view("header","Header"); //header  view call
 Route::view("about","About"); //about  view call
 Route::get("blade",[Bladecontroller::class,'bladeview']);
 Route::view("inner","inner");
+Route::get("example",[Bladecontroller::class,'phpinjs']);
