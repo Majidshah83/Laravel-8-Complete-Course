@@ -1,0 +1,13 @@
+what is midleware: midleware is condition 
+example:
+like 18 year old man can access only this 
+only pakistani can watch this 
+if he dont login he cant acess this page
+
+types of midleware:
+1) Globle midleware: For every page apply same condition
+
+2) Group midleware:if we have 20 pages and we apply condition on 10 pages
+
+3)Routed midleware:apply condition on one Route
+
