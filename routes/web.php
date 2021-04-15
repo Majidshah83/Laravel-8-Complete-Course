@@ -38,4 +38,7 @@ Route::view("inner","inner");
 Route::get("example",[Bladecontroller::class,'phpinjs']);
 Route::post("Form",[FormController::class,'save']);  //in double court need same class name action take form Form because Form name a view
 Route::view("loginsave","Form");
+Route::view("noacess",'noacess');
+Route::view("acess",'acess');
+Route::view("checkage",'checkage');
 
