@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
  use App\Http\Controllers\UserController;
   use App\Http\Controllers\Viewcontroller;
   use App\Http\Controllers\Bladecontroller;
+  use App\Http\Controllers\FormController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,3 +36,5 @@ Route::view("about","About"); //about  view call
 Route::get("blade",[Bladecontroller::class,'bladeview']);
 Route::view("inner","inner");
 Route::get("example",[Bladecontroller::class,'phpinjs']);
+Route::get("Form",[FormController::class,'save']);  //in double court need same class name action take form Form because Form name a view
+Route::view("login","Form");
