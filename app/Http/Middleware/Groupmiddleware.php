@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class checkAge
+class Groupmiddleware
 {
     /**
      * Handle an incoming request.
@@ -15,9 +15,10 @@ class checkAge
      * @return mixed
      */
     public function handle(Request $request, Closure $next)
-     {  
-        
-        
+    {   echo"middlware apply on this page";
+        if($request->age && $request->age<20){
+            return redirect('noacess');
+        }
         return $next($request);
     }
 }

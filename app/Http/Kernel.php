@@ -14,7 +14,7 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
-        \App\Http\Middleware\checkAge::class,  //middlware checkAge import here
+        // \App\Http\Middleware\checkAge::class,  //middlware checkAge import here
         \App\Http\Middleware\TrustProxies::class,
         \Fruitcake\Cors\HandleCors::class,
         \App\Http\Middleware\PreventRequestsDuringMaintenance::class,
@@ -43,6 +43,10 @@ class Kernel extends HttpKernel
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+        'protectionpage'=>[
+            \App\Http\Middleware\Groupmiddleware::class,   //group middlware
+        ],
+        
     ];
 
     /**

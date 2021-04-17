@@ -40,5 +40,10 @@ Route::post("Form",[FormController::class,'save']);  //in double court need same
 Route::view("loginsave","Form");
 Route::view("noacess",'noacess');
 Route::view("acess",'acess');
-Route::view("checkage",'checkage');
+Route::view("noacess",'noacess');
+Route::view("goroupmidlware",'groupmidlware');
+Route::group(['middleware'=>['protectionpage']],function(){         //group middlware
+   Route::view("home",'home');
+});
+
 
