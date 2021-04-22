@@ -45,5 +45,6 @@ Route::view("goroupmidlware",'groupmidlware');
 Route::group(['middleware'=>['protectionpage']],function(){         //group middlware
    Route::view("home",'home');
 });
-
+route::view("routehome",'Routehome')->middleware('protectedpage');  //route middleware
+route::view("routenoacess",'Routenoacess');
 
