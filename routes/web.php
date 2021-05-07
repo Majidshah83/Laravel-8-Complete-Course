@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
   use App\Http\Controllers\Viewcontroller;
   use App\Http\Controllers\Bladecontroller;
   use App\Http\Controllers\FormController;
+  use App\Http\Controllers\HttpController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,4 +48,5 @@ Route::group(['middleware'=>['protectionpage']],function(){         //group midd
 });
 route::view("routehome",'Routehome')->middleware('protectedpage');  //route middleware
 route::view("routenoacess",'Routenoacess');
+Route::get("http",[HttpController::class,'index']);
 
