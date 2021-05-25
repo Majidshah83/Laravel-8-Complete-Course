@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
   use App\Http\Controllers\HttpController;
   use App\Http\Controllers\Methodtest;
   use App\Http\Controllers\Logincontroller;
+  use App\Http\Controllers\flashcontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -68,3 +69,6 @@ Route::get('/login', function () {
     }
     return view('login');
 });
+Route::view("flash",'Storeuser');
+Route::post("strorflash",[flashcontroller::class,'store']);
+Route::view("flashc",'flashview');
