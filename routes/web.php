@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
   use App\Http\Controllers\FormController;
   use App\Http\Controllers\HttpController;
   use App\Http\Controllers\Methodtest;
+  use App\Http\Controllers\Logincontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,7 +25,7 @@ Route::get('/', function () {
 // Route::get("controller",[Usercontroller::class,'index']); Laravel 8 calll function
 Route::get('/controller', 'UserController@index');
 Route::get('/show/{id}',[Usercontroller::class,'showid']);  //user controller
-// Route::view("user","User"); // we can call view  like this 
+// Route::view("user","User"); // we can call view  like this
 Route::get('/user/{name}', function ($name) {
     return view('user',["users"=>$name]);      // pass data through url in view
 });
@@ -50,6 +51,20 @@ Route::group(['middleware'=>['protectionpage']],function(){         //group midd
 route::view("routehome",'Routehome')->middleware('protectedpage');  //route middleware
 route::view("routenoacess",'Routenoacess');
 Route::get("http",[HttpController::class,'index']);
-Route::view("login",'methodview'); //method view
-Route::put("test",[Methodtest::class,'testget']);
-
+Route::view("log",'methodview'); //method view
+Route::put("test",[Methodtest::class,'testget']);   //Http method
+Route::post("logins",[Logincontroller::class,'getlog']);
+// Route::view("login1",'login');
+Route::view("profile",'Profile');
+Route::get('/logout', function () {
+    if(session()->has('users')){
+        session()->pull('users');
+    }
+    return redirect('login');
+});
+Route::get('/login', function () {
+    if(session()->has('users')){
+     return redirect('profile');
+    }
+    return view('login');
+});
