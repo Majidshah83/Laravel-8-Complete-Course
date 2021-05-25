@@ -70,5 +70,8 @@ Route::get('/login', function () {
     return view('login');
 });
 Route::view("flash",'Storeuser');
-Route::post("strorflash",[flashcontroller::class,'store']);
+Route::post("strorflash",[flashcontroller::class,'store']);  //flash session
 Route::view("flashc",'flashview');
+
+
+Route::view("local",'localization');

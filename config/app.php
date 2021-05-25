@@ -80,7 +80,9 @@ return [
     |
     */
 
-    'locale' => 'en',
+
+    // 'locale' => 'urdu',     //urdu langauge
+    'locale' => 'en',           //english language
 
     /*
     |--------------------------------------------------------------------------
