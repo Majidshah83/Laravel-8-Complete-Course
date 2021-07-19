@@ -72,6 +72,18 @@ Route::get('/login', function () {
 Route::view("flash",'Storeuser');
 Route::post("strorflash",[flashcontroller::class,'store']);  //flash session
 Route::view("flashc",'flashview');
-
-
 Route::view("local",'localization');
+
+/*
+|--------------------------------------------------------------------------
+| Middleware
+|-------------------------------------------------------------------------
+|
+*/
+Route::get('/admin/{role}', function ($role) {
+    return view('Admin');    
+})->middleware('checkrole');
+
+Route::get('/nuser', function () {
+    return view('users');   
+});
